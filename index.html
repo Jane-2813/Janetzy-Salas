@@ -1,0 +1,349 @@
+# Janetzy-Salas
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janetzy Salas - Currículum</title>
+    <style>
+        :root {
+            --primary-color: #ff5733;
+            --secondary-color: #2c3e50;
+            --accent-color: #38780c;
+            --light-color: #ecf0f1;
+            --dark-color: #34495e;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: white;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            border: 8px solid var(--secondary-color);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+            border-bottom: 5px solid var(--secondary-color);
+        }
+        
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            background-color: var(--light-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: var(--primary-color);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .name {
+            margin-top: 20px;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .title {
+            font-size: 1.2rem;
+            margin-top: 5px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            gap: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+        }
+        
+        .contact-item i {
+            margin-right: 8px;
+            color: white;
+        }
+        
+        main {
+            background-color: white;
+            padding: 30px;
+            border-radius: 0 0 5px 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--secondary-color);
+            border-right: 5px solid var(--secondary-color);
+            border-bottom: 5px solid var(--secondary-color);
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            border: 2px solid var(--light-color);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-color);
+        }
+        
+        .about-me {
+            line-height: 1.8;
+        }
+        
+        .education, .experience {
+            margin-bottom: 20px;
+        }
+        
+        .edu-item, .exp-item {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 3px solid var(--primary-color);
+        }
+        
+        .date {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .institution, .position {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 5px 0;
+        }
+        
+        .responsibilities {
+            margin-top: 10px;
+        }
+        
+        .responsibilities li {
+            margin-bottom: 5px;
+            list-style-type: circle;
+            margin-left: 20px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            position: relative;
+            border-top: 3px solid var(--secondary-color);
+            background-color: var(--light-color);
+            border-radius: 0 0 10px 10px;
+        }
+        
+        /* Estilos para el formulario de contacto */
+        .contact-form {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 15px;
+            border: 3px solid var(--primary-color);
+            border-radius: 8px;
+        }
+        
+        .contact-form input[type="text"],
+        .contact-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid var(--light-color);
+            border-radius: 5px;
+        }
+        
+        .contact-form input[type="submit"] {
+            background-color: var(--primary-color);
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+        }
+        
+        .contact-form input[type="submit"]:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-item {
+                margin: 5px 0;
+            }
+            
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .name {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+    <img src="E:\608\adriana-web\IA.jpeg" alt="Foto de Janetzy Salas" width="250" height="275">
+    <h1 class="name">Janetzy Salas</h1>
+    <p class="title">ESTUDIANTE DE INFORMÁTICA</p>
+    <div class="contact-info">
+        <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>449-100-4660</span>
+        </div>
+        <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>salasjanetzy@gmail.com</span>
+        </div>
+        <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Aguascalientes</span>
+        </div>
+    </div>
+</div>
+        </header>
+        <main>
+            <section class="section">
+                <h2 class="section-title">Acerca de mí</h2>
+                <div class="about-me">
+                    <p>Estudiante de 18 años de edad en informática capacitado en el mantenimiento de hardware, software, manejo de bases de datos, manejo de programación y  poco conocimiento en electrónica.</p>
+                </div>
+				        <section class="section">
+                <h2 class="section-title">Experiencia</h2>
+                <div class="experience">
+                    <div class="exp-item">
+                        <h3 class="position">Alumno / Estudiante</h3>
+                        <p class="institution">Conalep J Refugio Esparza Reyes</p>
+                        <ul class="responsibilities">
+                            <li>Creación de una base de datos con conexión punto a punto</li>
+                            <li>Creación de una base de datos distribuida</li>
+                            <li>Manipulación de una red LAN</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>           
+            </section> 
+            <section class="section">
+                <h2 class="section-title">Formación</h2>
+                <div class="education">
+                    <div class="edu-item">
+                        <p class="date">2009-2011</p>
+                        <h3 class="institution">Mauricio Bercun Melnic</h3>
+                        <p>Preescolar</p>
+                        <p>Documento obtenido: certificado Preescolar</p>
+                    </div>                   
+                    <div class="edu-item">
+                        <p class="date">2011-2017</p>
+                        <h3 class="institution">Andanac Nissan No. 8</h3>
+                        <p>Primaria</p>
+                        <p>Documento obtenido: certificado de primaria</p>
+                    </div>  
+                    <div class="edu-item">
+                        <p class="date">2017-2022</p>
+                        <h3 class="institution">Escuela Secundaria Tecnica No. 32 "Francisco Aguayo Mora"</h3>
+                        <p>Secundaria</p>
+                        <p>Documento obtenido: certificado de secundaria</p>
+                    </div>
+                    <div class="edu-item">
+                        <p class="date">2022-2025</p>
+                        <h3 class="institution">Conalep J Refugio Esparza Reyes</h3>
+                        <p>Preparatoria</p>
+                            <p>Documento obtenido: certificado de coursera <a href="https://www.coursera.org/account/accomplishments/verify/A2020MMF555W" target="_blank">[Ver certificado]</a></p>
+                    </div>
+                    <div class="edu-item">
+                        <p class="date">Futuro</p>
+                        <h3 class="institution">Ita</h3>
+                        <p>Universidad</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <h2 class="section-title">Experiencia</h2>
+                <div class="experience">
+                    <div class="exp-item">
+                        <h3 class="position">Alumno / Estudiante</h3>
+                        <p class="institution">Conalep J Refugio Esparza Reyes</p>
+                        <ul class="responsibilities">
+                            <li>Creación de una base de datos con conexión punto a punto</li>
+                            <li>Creación de una base de datos distribuida</li>
+                            <li>Manipulación de una red LAN</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+          <h2><font color="blue" face="Arial">Formulario de Contacto</font></h2>
+        <form action="#" method="post">
+            <table border="0" cellpadding="5">
+                <tr>
+                    <td align="right"><label for="nombre"><font color="red" face="Arial">Nombre:</font></label></td>
+                    <td><input type="text" id="nombre" name="nombre"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="correo"><font color="red" face="Arial">Correo:</font></label></td>
+                    <td><input type="email" id="correo" name="correo"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="telefono"><font color="red" face="Arial">Teléfono:</font></label></td>
+                    <td><input type="tel" id="telefono" name="telefono"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="mensaje"><font color="red" face="Arial">Mensaje:</font></label></td>
+                    <td><textarea id="mensaje" name="mensaje" rows="4" cols="30"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="Enviar"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 Janetzy Salas. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
